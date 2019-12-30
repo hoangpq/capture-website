@@ -140,7 +140,13 @@ const captureWebsite = async (input, options) => {
 		delay: 0,
 		debug: false,
 		darkMode: false,
-		launchOptions: {},
+		launchOptions: {
+      			args: [
+        			'--no-sandbox',
+        			'--disable-setuid-sandbox',
+        			'--disable-dev-shm-usage'
+			]
+		},
 		_keepAlive: false,
 		isJavaScriptEnabled: true,
 		...options
